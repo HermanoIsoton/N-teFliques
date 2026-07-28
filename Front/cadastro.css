@@ -10,11 +10,9 @@ body{
   font-family: Arial, Helvetica, sans-serif;
 }
 .formulario{
-    width: 500px;
-    height: 500px;
-       background-color: rgb(0, 0, 0);
-    width: 500px;
-    height: 530px;
+    width: 700px;
+    height: 700px;
+    background-color: rgb(0, 0, 0);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -79,4 +77,11 @@ img{
     color: black;
     width: 45px;
     border-radius: 5px;
+}
+.avaliacao{
+    color: black;
+    border-radius: 5px;
+    height: 20px;
+    width: 40px;
+    background-color: yellow    ;
 }

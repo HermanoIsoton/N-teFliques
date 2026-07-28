@@ -209,6 +209,7 @@ font-size: 25px;
     font-size: 40px;
      background-color: rgba(128, 128, 128, 0.329);
           border-radius: 50%;
+          
 }
 
 /*cards*/
@@ -255,4 +256,11 @@ section{
     color: black;
     width: 45px;
     border-radius: 5px;
+}
+.avaliacao{
+    color: black;
+    border-radius: 5px;
+    height: 20px;
+    width: 24px;
+    background-color: yellow    ;
 }
