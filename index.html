@@ -1,19 +1,67 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+   <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="" href="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NéteFliques</title>
-  </head>
-  <body>
-      <header>
-        <img src="logo-header.png" alt="Logo CineVault">
-      </header>
-      <article class="banner">
+</head>
+<body>
+    <aside class="menu">
+        <picture><img src="logo-header.png" alt="logo do site"></picture>
+        <div><i class="bi bi-house-door"></i><a href="//">Inicio</a></div>
+         <div><i class="bi bi-collection-play"></i><a href="//">Filmes</a></div>
+         <div><i class="bi bi-collection-play"></i><a href="//">Séries</a></div>
+         <div><i class="bi bi-tag"></i><a href="//">Generos</a></div>
+         <div><i class="bi bi-heart"></i><a href="//">Favoritos</a></div>
+         <div><i class="bi bi-star"></i><a href="//">Assistir depois</a></div>
+         <h3>Genero</h3>
+           <a id="genero-cor">Ação</a>
+           <a id="genero-cor">Aventura</a>
+           <a id="genero-cor">Animação</a>
+           <a id="genero-cor">Animação</a>
+           <a id="genero-cor">Comédia</a>
+           <a id="genero-cor">Drama</a>
+           <a id="genero-cor">Ficção cientifica</a>
+           <a id="genero-cor">Terror</a>
+           <a id="genero-cor">Romance</a>
+    </aside>
 
-      </article>
-      <section class="container"></section>
-  </body>
+    <main class="main">
+        <header><div class="barraPesquisa"><i class="bi bi-search"></i>
+            <input type="text" name="pesquisa" placeholder="Pesquise por titulo"></div>
+
+            <div class="botao-cadastrar">
+            <i class="bi bi-plus"></i> <a href="">Cadastrar filme</a>
+            </div>
+        </header>
+        <article>
+           
+                <i id="btn-esquerda"  class="btn-left bi bi-arrow-left-short"></i>
+            <div class="informacoes">
+                <div class="titulo">
+                    <p id="titulo">OppenHeimer</h1>
+                </div>
+                <div class="ano">
+                    <p>2026</p>
+                    <p>drama</p>
+                    <p>Histotrico</p>
+                    <p>9.0</p>
+                </div>
+                 <div class="descricao">
+                    <p>Lorem ipsum, dolor sit amet consectetur es quidem ipsa fugit repudiandae reprehenderit deleniti aliquid nesciunt.</p>
+                 </div>
+                 <div class="btns">
+                    <button>Assistir trailler</button>  
+                    <button>Mais informaçoes</button>   
+                </div>
+            </div>
+            <div class="carrosel"><i id="btn-direita" class="bi bi-arrow-right-short"></i></div>
+        </article>
+    </main>
+    <script src="script.js"></script>
+</body>
 </html>

@@ -1,41 +1,212 @@
 *{
     margin: 0;
-    padding: 0;
     border: 0;
+    padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
 }
 body{
     height: 100vh;
     width: 100vw;
-    background-color: rgb(20, 20, 20);
-     display: flex;
-     flex-direction: column;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 1fr;
 }
-
-/*headers*/ 
-header{
-    border: 0px solid rgb(95, 95, 95);
-    height:10%;
+/*aside*/
+.menu{
+    background-color: rgb(36, 36, 36);
+    padding: 10px;
+    display: grid;
+    justify-items: center;
+    grid-template-rows: 90px repeat(6, 40px) 40px repeat(9, 30px) ;
+    grid-template-columns: 1fr;
+    gap: 5px;
+     font-size: 18px;
+     overflow: auto;
+}
+.menu div{
+      color: white;
+    width: 100%;
     border-radius: 10px;
-    margin: 5px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s linear;
+    gap: 10px;
+    padding: 5px;
 }
-/*logo*/ 
+.menu a{
+    color: white;
+    width: 100%;
+}
+.menu h3{
+    color: rgb(107, 106, 106);
+}
+#genero-cor{
+       color: rgb(179, 179, 179);
+}
+#genero-cor:hover{
+       color: rgb(235, 235, 235);
+}
+.menu div:hover{
+    background-color: rgba(255, 255, 255, 0.212);
+}
+.menu img{
+    height: 100px;
+}
+.menu::-webkit-scrollbar {
+ width: 0px
+}
 
-header img{
+
+/*main*/
+.main{
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    flex-direction: column;
+
+}
+
+/*header*/
+header{
+    height: 60px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: space-between;
+}
+header input{
+    height: 100%;
+    width: 600px;
+    background-color:rgb(59, 59, 59) ;
+}
+header i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     height: 100%;
+     width: 40px;
+}
+.barraPesquisa{
+    display: flex;
+     height: 70%;
+    width: 650px;
+      background-color:rgb(59, 59, 59) ;
+      border-radius: 10px;
+}
+.botao-cadastrar{
+    display: flex;
+      background-color:rgb(59, 59, 59) ;
+      height: 70%;
+      border-radius: 10px;
+       display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+header a{
+    color: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*baner*/
+article{
+    background-color: black;
+     height: 300px;
+    margin-right: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.informacoes{
+    width: 30%;
+    height: 100%;
+color: white;
+font-size: 25px;
+  display: flex;
+  flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.titulo{
+     font-size: 40px;
+     font-weight: bold;
+     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ano{
+   
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    font-size: 20px;
+    color: rgb(116, 116, 116);
+}
+.descricao{
+    height: 120px; 
+    width: 90%; 
+        font-size: 23px;
+    color: rgb(155, 155, 155);
+}
+.btns{
+   
+    height: 80px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+.btns button{
+    color:  white;
+    background-color: rgb(255, 0, 0);
+    border-radius: 10px;
     height: 50px;
-    width: 100px;
+    width: 160px;
 }
-
-
-
-
-
-
-.banner{
-    border: 1px solid red;
-    height: 40%;
+.btn-left{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+     background-color: rgba(128, 128, 128, 0.329);
+     border-radius: 50%;
+     align-self: center;
 }
-.container{
-    border: 1px solid red;
-   min-height:50% ;
+.carrosel{
+    height: 100%;
+       border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 70%;
+    align-self: end;
+    background-position: center;
+      background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+     background-size: 100% 300px;
+    background-image: url('https://i0.wp.com/cloud.estacaonerd.com/wp-content/uploads/2022/12/14124955/maxresdefault-27.jpg?fit=1280%2C720&ssl=1');
+}
+.carrosel i{
+     height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+     background-color: rgba(128, 128, 128, 0.329);
+          border-radius: 50%;
 }
