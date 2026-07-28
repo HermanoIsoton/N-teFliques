@@ -1,0 +1,82 @@
+body{
+    height: 100vh;
+    width: 100vw;
+   color: white;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+  gap: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.formulario{
+    width: 500px;
+    height: 500px;
+       background-color: rgb(0, 0, 0);
+    width: 500px;
+    height: 530px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+div{
+    display: flex;
+   gap: 10px;}
+input{
+    height: 40px;
+    width: 300px;
+    border-radius: 10px;
+}
+button{
+    height: 40px;
+    width: 100px;
+    background-color: rgb(223, 140, 16);
+     border-radius: 5px;
+}
+img{
+    height: 100px;
+}
+.visualizacao{
+  width: 500px;
+    height: 530px;
+    background-color: rgb(75, 74, 74);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    height: 70%;
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+     color: white;
+    border-radius: 10px;
+      background-position: center;  
+    background-size: contain;
+      background-size: 350px 260px;
+        background-image: url('https://m.media-amazon.com/images/S/pv-target-images/7de9bdaf287c0579ea16a70a62259ef00415feb09d1b59f49436f3b1571d3763.jpg');
+        transition: all 0.2s linear;
+}
+.card:hover{
+    width: 300px;
+}
+.nome{
+    font-weight: bolder;
+    font-size: 25px;
+}
+.categoria{
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    width: 45px;
+    border-radius: 5px;
+}
