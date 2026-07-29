@@ -1,45 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-   <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="icon" type="image/x-icon" href="Imagens/logo.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="" href="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NéteFliques</title>
 </head>
+
 <body>
     <aside class="menu">
-        <picture><img src="logo-header.png" alt="logo do site"></picture>
-        <div><i class="bi bi-house-door"></i><a href="//">Inicio</a></div>
-         <div><i class="bi bi-collection-play"></i><a href="//">Filmes</a></div>
-         <div><i class="bi bi-collection-play"></i><a href="//">Séries</a></div>
-         <div><i class="bi bi-tag"></i><a href="//">Generos</a></div>
-         <div><i class="bi bi-heart"></i><a href="//">Favoritos</a></div>
-         <div><i class="bi bi-star"></i><a href="//">Assistir depois</a></div>
-         <h3>Genero</h3>
-           <a id="genero-cor">Ação</a>
-           <a id="genero-cor">Aventura</a>
-           <a id="genero-cor">Animação</a>
-           <a id="genero-cor">Animação</a>
-           <a id="genero-cor">Comédia</a>
-           <a id="genero-cor">Drama</a>
-           <a id="genero-cor">Ficção cientifica</a>
-           <a id="genero-cor">Terror</a>
-           <a id="genero-cor">Romance</a>
+        <picture><img src="Imagens/logo-header.png" alt="logo do site"></picture>
+        <div><i class="bi bi-house-door"></i><button id="fonte-tudo">Inicio</button></div>
+        <div><i class="bi bi-collection-play"></i><button id="fonte-filmes">Filmes</button></div>
+        <div><i class="bi bi-collection-play"></i><button id="fonte-series">Séries</button></div>
+        <div><i class="bi bi-tag"></i><button id="generos">Generos</button></div>
+        <div><i class="bi bi-heart"></i><button>Favoritos</button></div>
+        <div><i class="bi bi-star"></i><button>Assistir depois</button></div>
+        <h3>Genero</h3>
+        <a id="genero-cor">Ação</a>
+        <a id="genero-cor">Aventura</a>
+        <a id="genero-cor">Animação</a>
+        <a id="genero-cor">Animação</a>
+        <a id="genero-cor">Comédia</a>
+        <a id="genero-cor">Drama</a>
+        <a id="genero-cor">Ficção cientifica</a>
+        <a id="genero-cor">Terror</a>
+        <a id="genero-cor">Romance</a>
     </aside>
 
     <main class="main">
-        <header><div class="barraPesquisa"><i class="bi bi-search"></i>
-            <input type="text" name="pesquisa" placeholder="Pesquise por titulo"></div>
+        <header>
+            <div class="barraPesquisa"><i class="bi bi-search"></i>
+                <input type="text" name="pesquisa" placeholder="Pesquise por titulo">
+            </div>
 
             <div class="botao-cadastrar">
-            <i class="bi bi-plus"></i> <a href="/NeteFliques/Front/cadastro.html">Cadastrar filme</a>
+                <i class="bi bi-plus"></i> <a href="/NeteFliques/Front/cadastro.html">Cadastrar filme</a>
             </div>
         </header>
-        <article>
-                <i id="btn-esquerda"  class="btn-left bi bi-arrow-left-short"></i>
+        <article id="carrosel">
+            <i id="btn-esquerda" class="btn-left bi bi-arrow-left-short"></i>
             <div class="informacoes">
                 <div class="titulo">
                     <p id="titulo">OppenHeimer</p>
@@ -50,54 +54,70 @@
                     <p>Histotrico</p>
                     <p>9.0</p>
                 </div>
-                 <div class="descricao">
-                    <p>Lorem ipsum, dolor sit amet consectetur es quidem ipsa fugit repudiandae reprehenderit deleniti aliquid nesciunt.</p>
-                 </div>
-                 <div class="btns">
-                    <button>Assistir trailler</button>  
-                    <button>Mais informaçoes</button>   
+                <div class="descricao">
+                    <p>Lorem ipsum, dolor sit amet consectetur es quidem ipsa fugit repudiandae reprehenderit deleniti
+                        aliquid nesciunt.</p>
+                </div>
+                <div class="btns">
+                    <button>Assistir trailler</button>
+                    <button>Mais informaçoes</button>
                 </div>
             </div>
             <div class="carrosel"><i id="btn-direita" class="bi bi-arrow-right-short"></i></div>
         </article>
         <section>
-                <div class="inicio">
-                    <h2>Inicio</h3>
-                    </div>
-                    <div class="container-cards">
-                        <div class="card">
-                            <div class="nome">La casa de papel</div>
-                            <div class="categoria">Filme</div>
-                            <div class="avaliacao"><p>9.0</p></div>
-                        </div>
-                        <div class="card">
-                            <div class="nome">La casa de papel</div>
-                            <div class="categoria">Filme</div>
-                            <div class="avaliacao"><p>9.0</p></div>
-                        </div>
-                        <div class="card">
-                            <div class="nome">La casa de papel</div>
-                            <div class="categoria">Filme</div>
-                            <div class="avaliacao"><p>9.0</p></div>
-                        </div>
-                        <div class="card">
-                            <div class="nome">La casa de papel</div>
-                            <div class="categoria">Filme</div>
-                            <div class="avaliacao"><p>9.0</p></div>
-                        </div>
-                        <div class="card">
-                            <div class="nome">La casa de papel</div>
-                            <div class="categoria">Filme</div>
-                            <div class="avaliacao"><p>9.0</p></div>
-                        </div>
-                        <div class="card">
-                            <div class="nome">La casa de papel</div>
-                            <div class="categoria">Filme</div>
-                            <div class="avaliacao"><p>9.0</p></div>
-                        </div>
-                    </div>
+            <div class="inicio">
+                <h2>lançados recentemente</h3>
+            </div>
+            <div class="container-cards">
+
+
+            </div>
+        </section>
+        <section>
+            <div class="inicio">
+                <h2>Filmes</h3>
+            </div>
+            <div class="container-cards-filmes">
+
+
+            </div>
+        </section>
+        <section>
+            <div class="inicio">
+                <h2>Series</h3>
+            </div>
+            <div class="container-cards-series">
+
+         
+            </div>
+        </section>
+         <section>
+            <div class="inicio">
+                <h2>Filtrar Por Genero</h3>
+                     <div class="container-cards-genero">
+                <select name="genero" id="genero" >
+            <option value="acao">Ação</option>
+            <option value="aventura">Aventura</option>
+           <option value="comedia">Comédia</option>
+           <option value="drama">Drama</option>
+           <option value="ficcao-cientifica">Ficção Científica</option>
+            <option value="fantasia">Fantasia</option>
+            <option value="terror">Terror</option>
+            <option value="suspense">Suspense</option>
+            <option value="romance">Romance</option>
+            <option value="animacao">Animação</option>
+            <option value="documentario">Documentário</option>
+            <option value="policial">Policial / Crime</option>
+            <option value="misterio">Mistério</option>
+          </select>
+            </div>
+           
+            </div>
         </section>
     </main>
-    <script src="script.js"></script>
+    <script src="Front/banner.js"></script>
+    <script src="index.js"></script>
 </body>
+
 </html>

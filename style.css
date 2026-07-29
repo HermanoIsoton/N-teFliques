@@ -25,6 +25,7 @@ body{
      font-size: 18px;
      overflow: auto;
 }
+
 .menu div{
       color: white;
     width: 100%;
@@ -35,9 +36,16 @@ body{
     gap: 10px;
     padding: 5px;
 }
-.menu a{
+.menu button{
     color: white;
     width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-weight: bolder;
+    font-size: 17px;
 }
 .menu h3{
     color: rgb(107, 106, 106);
@@ -59,27 +67,31 @@ body{
 }
 
 
+
 /*main*/
 .main{
     background-color: rgb(44, 44, 44);
     display: flex;
     flex-direction: column;
-   overflow: auto;
+   overflow-y: auto;
+   
 }
 
 /*header*/
 header{
-    height: 60px;
+    height: 40px;
     margin: 10px;
     display: flex;
     align-items: center;
       color: rgb(241, 114, 9);
     justify-content: space-between;
+    flex-shrink: 0;
 }
 header input{
     height: 100%;
     width: 600px;
     background-color:rgb(59, 59, 59) ;
+    color: white;
 }
 header i{
     display: flex;
@@ -90,7 +102,7 @@ header i{
 }
 .barraPesquisa{
     display: flex;
-     height: 70%;
+     height: 100%;
     width: 650px;
       background-color:rgb(59, 59, 59) ;
       border-radius: 10px;
@@ -98,7 +110,7 @@ header i{
 .botao-cadastrar{
     display: flex;
       background-color:rgb(59, 59, 59) ;
-      height: 70%;
+      height: 100%;
       border-radius: 10px;
        display: flex;
     align-items: center;
@@ -122,6 +134,7 @@ article{
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
+    flex-shrink: 0;
 }
 .informacoes{
     width: 30%;
@@ -218,18 +231,23 @@ section{
 }
 .inicio{
  color: white;
+ height: 50px;
+ display: flex;
+ align-items: center;
+ margin-left: 20px;
 }
-.container-cards{
-    height: 91%;
+.container-cards,.container-cards-filmes, .container-cards-series, .container-cards-genero{
+    height: 280px;
     display: flex;
     align-items: center;
     padding: 5px;
-    overflow: auto;
+    overflow-x: auto;
     gap: 10px;
 }
 .card{
     height: 100%;
     width: 230px;
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -237,9 +255,9 @@ section{
     border-radius: 10px;
       background-position: center;  
     background-size: contain;
-      background-size: 350px 260px;
-        background-image: url('https://m.media-amazon.com/images/S/pv-target-images/7de9bdaf287c0579ea16a70a62259ef00415feb09d1b59f49436f3b1571d3763.jpg');
+      background-size: 350px 260px;      
   transition: all 0.2s linear;
+  
 }
 .card:hover{
     width: 300px;
@@ -247,6 +265,9 @@ section{
 .nome{
     font-weight: bolder;
     font-size: 25px;
+    background-color: rgba(0, 0, 0, 0.322); 
+    overflow: auto;
+    scrollbar-width: none;
 }
 .categoria{
     background-color: aqua;
@@ -254,13 +275,20 @@ section{
     align-items: center;
     justify-content: center;
     color: black;
-    width: 45px;
+    width: 40px;
+    height: 20px;
     border-radius: 5px;
+    padding: 7px;
+    border: 2px solid black;
+
 }
 .avaliacao{
     color: black;
     border-radius: 5px;
-    height: 20px;
-    width: 24px;
+        border: 2px solid black;
+    max-width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: yellow    ;
 }
