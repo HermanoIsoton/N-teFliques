@@ -212,6 +212,12 @@ font-size: 25px;
     background-image: url('https://i0.wp.com/cloud.estacaonerd.com/wp-content/uploads/2022/12/14124955/maxresdefault-27.jpg?fit=1280%2C720&ssl=1');
     transition: all 0.5s linear;
 }
+.ano p{
+    background-color: rgba(104, 104, 104, 0.162);
+    border-radius: 10px;
+    
+    
+}
 .carrosel i{
      height: 40px;
     width: 40px;
@@ -224,6 +230,7 @@ font-size: 25px;
           border-radius: 50%;
           
 }
+
 
 /*cards*/
 section{

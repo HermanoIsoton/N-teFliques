@@ -1,7 +1,7 @@
 <?php
 $servidor = "localhost";
-$usuario = "root";
-$senha = "";
+$usuario = "hermano";
+$senha = "senha123";
 $nomeDoBanco = "db-filmes";
 
 $conn = new mysqli($servidor, $usuario, $senha, $nomeDoBanco);
