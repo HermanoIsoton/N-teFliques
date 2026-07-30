@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atualização</title>
+  </head>
+  <body>
+    <h2>Editar Informaçoes</h2>
+    <form action="../Back/atualizar.php" method="post" id="formAtualizar">
+      <input type="hidden" name="id" id="idAtualizar" />
+
+      <div class="campoEdicao">
+        <label>Link da capa:</label>
+        <input
+          id="capa"
+          type="text "
+          name="capa"
+          placeholder="Link da foto do filme serie..."
+        />
+      </div>
+      <div class="campoEdicao">
+        <label>Titulo:</label>
+        <input
+          id="titulo"
+          type="text"
+          name="titulo"
+          placeholder="Titulo do filme/serie..."
+        />
+      </div>
+      <div class="campoEdicao">
+        <label>data De Lançamento:</label>
+        <input
+          id="dataLancamento"
+          type="date"
+          name="dataLancamento"
+          placeholder="data De Lançamento do filme/serie..."
+        />
+      </div>
+      <div class="campoEdicao selects">
+        <label>Tipo:</label>
+        <select name="tipo" id="tipo">
+          <option value="filme">Filme</option>
+          <option value="serie">Serie</option>
+        </select>
+        <label>Genero:</label>
+        <select name="genero" id="genero">
+          <option value="acao">Ação</option>
+          <option value="aventura">Aventura</option>
+          <option value="comedia">Comédia</option>
+          <option value="drama">Drama</option>
+          <option value="ficcao-cientifica">Ficção Científica</option>
+          <option value="fantasia">Fantasia</option>
+          <option value="terror">Terror</option>
+          <option value="suspense">Suspense</option>
+          <option value="romance">Romance</option>
+          <option value="animacao">Animação</option>
+          <option value="documentario">Documentário</option>
+          <option value="policial">Policial / Crime</option>
+          <option value="misterio">Mistério</option>
+        </select>
+      </div>
+      <div class="campoEdicao">
+        <label>avaliação:</label>
+        <input
+          id="avaliacao"
+          type="number"
+          name="avaliacao"
+          placeholder="Avaliação do filme/serie ex: 10.0..."
+        />
+      </div>
+      <div class="campoEdicao">
+        <label>Link do trailer</label>
+        <input
+          id="trailer"
+          type="text"
+          name="trailer"
+          placeholder="Link do trailer do filme/serie"
+        />
+      </div>
+      <div class="campoEdicao">
+        <label>sinopse</label>
+        <input
+          id="sinopse"
+          type="text"
+          name="sinopse"
+          placeholder="sinopse do filme"
+        />
+      </div>
+      <div class="Editar">
+        <button id="editar" type="submit">editar registro</button>
+      </div>
+    </form>
+    <form id="form-delete" method="POST" action="../Back/deletar.php">
+      <input type="hidden" name="id" id="campo-id" />
+      <button id="deletar" type="submit">excluir registro</button>
+    </form>
+    <script src="atualizar.js"></script>
+  </body>
+</html>

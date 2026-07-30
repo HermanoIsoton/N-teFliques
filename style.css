@@ -361,11 +361,19 @@ section{
     border-radius: 12px;
     background-position: center;
     background-size: cover;
-    transition: all 0.1s linear;
+    transition: all 0.2s linear;
 
 
 }
-
+form{
+     height: 100%;
+    width: 220px;  
+     transition: all 0.2s linear;
+}
+form:hover{
+      width: 260px;
+    height: 270px;
+}
 .card:hover{
     width: 260px;
     height: 270px;

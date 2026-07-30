@@ -10,60 +10,72 @@ async function carregardados() {
   dadosOriginais = await resposta.json();
 
   mostrarCards(dadosOriginais);
-   baner(dadosOriginais);
-   addValores();
+  baner(dadosOriginais);
+  addValores();
 }
 const containerCards = document.querySelector(".container-cards");
 const containerCardsFilmes = document.querySelector(".container-cards-filmes");
 const containerCardsSeries = document.querySelector(".container-cards-series");
 
- function criarCard(item) {
-    const card = document.createElement("div");
-    card.className = "card";
-    card.style.backgroundImage = `url('${item.capa}')`;
-    const titulo = document.createElement("div");
-    titulo.className = "nome";
-    titulo.textContent = item.titulo;
+function criarCard(item) {
+  const card = document.createElement("div");
+  card.className = "card";
+  card.style.backgroundImage = `url('${item.capa}')`;
+  const titulo = document.createElement("div");
+  titulo.className = "nome";
+  titulo.textContent = item.titulo;
 
-    const tipo = document.createElement("div");
-    tipo.className = "categoria";
-    tipo.textContent = item.tipo;
+  const tipo = document.createElement("div");
+  tipo.className = "categoria";
+  tipo.textContent = item.tipo;
 
-    const avaliacao = document.createElement("div");
-    const estrela = document.createElement("i");
-    estrela.className = "bi bi-star";
+  const avaliacao = document.createElement("div");
+  const estrela = document.createElement("i");
+  estrela.className = "bi bi-star";
 
-    avaliacao.className = "avaliacao";
-    avaliacao.textContent = item.avaliacao;
+  avaliacao.className = "avaliacao";
+  const aval = Number(item.avaliacao);
+  avaliacao.textContent = aval.toFixed(1);
 
-    card.appendChild(titulo);
-    card.appendChild(tipo);
-    card.appendChild(avaliacao);
-    avaliacao.appendChild(estrela);
-    return card;
-  }
+  card.appendChild(titulo);
+  card.appendChild(tipo);
+  card.appendChild(avaliacao);
+  avaliacao.appendChild(estrela);
+
+  // atualizar
+  const form = document.createElement("form");
+  const input = document.createElement("input");
+  input.type = "hidden";
+  input.value = item.id;
+  form.onclick = function () {
+    const url = `Front/atualizar.html?id=${item.id}&titulo=${encodeURIComponent(item.titulo)}&capa=${item.capa}&dataLancamento=${encodeURIComponent(item.data_de_lançamento)}&tipo=${item.tipo}&genero=${item.genero}&avaliacao=${item.avaliacao}&trailer=${item.trailer}&sinopse=${encodeURIComponent(item.sinopse)}`;
+    window.location.href = url;
+  };
+  form.appendChild(card);
+  form.appendChild(input);
+
+  return form;
+}
 
 function mostrarCards(listaDeDados) {
   const container = document.querySelector(".container-cards");
   container.innerHTML = "";
- containerCardsGenero.innerHTML = "";
+  containerCardsGenero.innerHTML = "";
   if (listaDeDados.length === 0) {
     container.innerHTML = "Nenhum registro encontrado";
     return;
   }
 
-    listaDeDados.forEach((item) => {
-      containerCards.appendChild(criarCard(item));
-       
-      if (item.tipo == "filme") {
-        containerCardsFilmes.appendChild(criarCard(item));
-      } else if (item.tipo == "serie") {
-        containerCardsSeries.appendChild(criarCard(item));
-      }
-    });
-  }
+  listaDeDados.forEach((item) => {
+    containerCards.appendChild(criarCard(item));
 
-
+    if (item.tipo == "filme") {
+      containerCardsFilmes.appendChild(criarCard(item));
+    } else if (item.tipo == "serie") {
+      containerCardsSeries.appendChild(criarCard(item));
+    }
+  });
+}
 
 // codigo para mostrar só o container selecionado
 const btnfilme = document.getElementById("fonte-filmes");
@@ -71,59 +83,52 @@ const btnserie = document.getElementById("fonte-series");
 const btninicio = document.getElementById("fonte-tudo");
 const btngeneros = document.getElementById("fonte-generos");
 const containerCardsGenero = document.querySelector(".container-cards-genero");
-const banner = document.querySelector('article');
-  const containerCardsTitulo = document.querySelector(".container-cards-titulo");
- containerCardsTitulo.parentElement.style.display = "none";
-
+const banner = document.querySelector("article");
+const containerCardsTitulo = document.querySelector(".container-cards-titulo");
+containerCardsTitulo.parentElement.style.display = "none";
 
 btnserie.addEventListener("click", () => {
-
   containerCardsSeries.parentElement.style.display = "block";
   containerCards.parentElement.style.display = "none";
   containerCardsFilmes.parentElement.style.display = "none";
   containerCardsGenero.parentElement.style.display = "none";
   containerCardsTitulo.parentElement.style.display = "none";
   banner.style.display = "none";
-   
-
-
 });
 btnfilme.addEventListener("click", () => {
   containerCardsFilmes.parentElement.style.display = "block";
   containerCards.parentElement.style.display = "none";
   containerCardsSeries.parentElement.style.display = "none";
-   containerCardsGenero.parentElement.style.display = "none";
-   banner.classList.remove('banner-visivel');
-   banner.classList.add('banner-oculto');
-     containerCardsTitulo.parentElement.style.display = "none";
-     banner.style.display = "none";
+  containerCardsGenero.parentElement.style.display = "none";
+  banner.classList.remove("banner-visivel");
+  banner.classList.add("banner-oculto");
+  containerCardsTitulo.parentElement.style.display = "none";
+  banner.style.display = "none";
 });
 btninicio.addEventListener("click", () => {
-  banner.classList.remove('banner-oculto');
-  banner.classList.add('banner-visivel');
+  banner.classList.remove("banner-oculto");
+  banner.classList.add("banner-visivel");
   containerCardsFilmes.parentElement.style.display = "block";
   containerCards.parentElement.style.display = "block";
   containerCardsSeries.parentElement.style.display = "block";
-   containerCardsGenero.parentElement.style.display = "block";
-     containerCardsTitulo.parentElement.style.display = "none";
-     banner.style.display = "flex";
+  containerCardsGenero.parentElement.style.display = "block";
+  containerCardsTitulo.parentElement.style.display = "none";
+  banner.style.display = "flex";
 });
 btngeneros.addEventListener("click", () => {
   containerCardsGenero.parentElement.style.display = "block";
   containerCardsFilmes.parentElement.style.display = "none";
   containerCards.parentElement.style.display = "none";
   containerCardsSeries.parentElement.style.display = "none";
-   banner.classList.remove('banner-visivel');
-   banner.classList.add('banner-oculto');
-     containerCardsTitulo.parentElement.style.display = "none";
-     banner.style.display = "none";
+  banner.classList.remove("banner-visivel");
+  banner.classList.add("banner-oculto");
+  containerCardsTitulo.parentElement.style.display = "none";
+  banner.style.display = "none";
 });
 
 // banner
 
-
 let trailerUrl;
-
 
 const btnEsquerda = document.getElementById("btn-esquerda");
 const btnDireita = document.getElementById("btn-direita");
@@ -157,12 +162,12 @@ sinopse.id = "sinopse";
 divdescricao.appendChild(sinopse);
 
 const trailer = document.createElement("button");
-trailer.textContent = "Assistir trailer"
+trailer.textContent = "Assistir trailer";
 trailer.id = "btn-trailer";
 divbtns.appendChild(trailer);
 
 const mais = document.createElement("button");
-mais.textContent = "Mais informaçoes"
+mais.textContent = "Mais informaçoes";
 mais.id = "btn-mais";
 divbtns.appendChild(mais);
 
@@ -178,29 +183,28 @@ const sinopseCarrosel = [];
 const trailerCarrosel = [];
 const informacoes = document.querySelector(".informacoes");
 
-function baner(listaDeDados){
-listaDeDados.forEach((item) => {
-  banerCarrosel.push(item.capa);
-  tituloCarrosel.push(item.titulo);
-  dataCarrosel.push(item.data_de_lançamento.substring(0, 4));
-  categoriaCarrosel.push(item.genero);
-  tipoCarrosel.push(item.tipo);
-  trailerCarrosel.push(item.trailer);
-  avaliaCarrosel.push(item.avaliacao);
-  sinopseCarrosel.push(item.sinopse);
-});
+function baner(listaDeDados) {
+  listaDeDados.forEach((item) => {
+    banerCarrosel.push(item.capa);
+    tituloCarrosel.push(item.titulo);
+    dataCarrosel.push(item.data_de_lançamento.substring(0, 4));
+    categoriaCarrosel.push(item.genero);
+    tipoCarrosel.push(item.tipo);
+    trailerCarrosel.push(item.trailer);
+    avaliaCarrosel.push(item.avaliacao).toFixed(1);
+    sinopseCarrosel.push(item.sinopse);
+  });
 }
 
-
-function addValores(){
-   titulo.textContent = tituloCarrosel[indice];
+function addValores() {
+  titulo.textContent = tituloCarrosel[indice];
   data.textContent = dataCarrosel[indice];
   categoria.textContent = categoriaCarrosel[indice];
   tipo.textContent = tipoCarrosel[indice];
   avalia.textContent = avaliaCarrosel[indice];
   sinopse.textContent = sinopseCarrosel[indice];
   carrosel.style.backgroundImage = `url('${banerCarrosel[indice]}')`;
-  trailerUrl = trailerCarrosel[indice]; 
+  trailerUrl = trailerCarrosel[indice];
 }
 
 btnDireita.addEventListener("click", () => {
@@ -209,7 +213,7 @@ btnDireita.addEventListener("click", () => {
   } else {
     indice += 1;
   }
- addValores();
+  addValores();
 });
 btnEsquerda.addEventListener("click", () => {
   if (indice == 0) {
@@ -230,21 +234,20 @@ const meuIntervalo = setInterval(() => {
 }, 6000);
 
 // codigo do trailer
-const btnTrailer = document.getElementById('btn-trailer');
-const modalVideo = document.querySelector('.modal-container');
-const btnFechar = document.getElementById('btnFechar');
-const iframeVideo = document.getElementById('iframeVideo');
+const btnTrailer = document.getElementById("btn-trailer");
+const modalVideo = document.querySelector(".modal-container");
+const btnFechar = document.getElementById("btnFechar");
+const iframeVideo = document.getElementById("iframeVideo");
 
-btnTrailer.addEventListener('click', () => {
-    iframeVideo.src = `${trailerUrl}&autoplay=1`;
-    modalVideo.style.display = 'flex';
+btnTrailer.addEventListener("click", () => {
+  iframeVideo.src = `${trailerUrl}&autoplay=1`;
+  modalVideo.style.display = "flex";
 });
 
-modalVideo.addEventListener('click', () => {
-     modalVideo.style.display = 'none';
-    iframeVideo.src = ""; 
+modalVideo.addEventListener("click", () => {
+  modalVideo.style.display = "none";
+  iframeVideo.src = "";
 });
-
 
 // filtrar por genero
 
@@ -256,27 +259,22 @@ function mostrarCardsgenero(listaDeDados) {
     return;
   }
 
- 
-    listaDeDados.forEach((item) => {
-      container.appendChild(criarCard(item));
-    });
-  }
-
+  listaDeDados.forEach((item) => {
+    container.appendChild(criarCard(item));
+  });
+}
 
 const campoFiltro = document.querySelector("#genero");
-campoFiltro.addEventListener("change", (event) =>{
-       const termoBuscado = event.target.value.toLowerCase();
+campoFiltro.addEventListener("change", (event) => {
+  const termoBuscado = event.target.value.toLowerCase();
 
-   const dadosFiltrados = dadosOriginais.filter((item) => {
-     return   item.genero.toLowerCase().includes(termoBuscado);
-   });
-   mostrarCardsgenero(dadosFiltrados);
+  const dadosFiltrados = dadosOriginais.filter((item) => {
+    return item.genero.toLowerCase().includes(termoBuscado);
+  });
+  mostrarCardsgenero(dadosFiltrados);
 });
 
-
-
 // filtrar por titulo
-
 
 function mostrarCardstitulo(listaDeDados) {
   const container = document.querySelector(".container-cards-titulo");
@@ -286,26 +284,24 @@ function mostrarCardstitulo(listaDeDados) {
     return;
   }
 
- 
-    listaDeDados.forEach((item) => {
-      container.appendChild(criarCard(item));
-    });
-  }
-
+  listaDeDados.forEach((item) => {
+    container.appendChild(criarCard(item));
+  });
+}
 
 const campoFiltrotitulo = document.querySelector("#pesquisa");
-campoFiltrotitulo.addEventListener("input", (event) =>{
-       const termoBuscado = event.target.value.toLowerCase();
+campoFiltrotitulo.addEventListener("input", (event) => {
+  const termoBuscado = event.target.value.toLowerCase();
 
-   const dadosFiltrados = dadosOriginais.filter((item) => {
-     return   item.titulo.toLowerCase().includes(termoBuscado);
-   });
-     banner.style.display = "none";
+  const dadosFiltrados = dadosOriginais.filter((item) => {
+    return item.titulo.toLowerCase().includes(termoBuscado);
+  });
+  banner.style.display = "none";
   containerCardsFilmes.parentElement.style.display = "none";
   containerCards.parentElement.style.display = "none";
   containerCardsSeries.parentElement.style.display = "none";
-   containerCardsGenero.parentElement.style.display = "none";
-   containerCardsTitulo.parentElement.style.display = "block";
-   mostrarCardstitulo(dadosFiltrados);
+  containerCardsGenero.parentElement.style.display = "none";
+  containerCardsTitulo.parentElement.style.display = "block";
+  mostrarCardstitulo(dadosFiltrados);
 });
 //   editar, deletar, arrumar o avalicao, visualisar informacoes de registro

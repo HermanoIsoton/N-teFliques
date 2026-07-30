@@ -206,17 +206,9 @@ button:active {
 .nome {
   font-weight: bolder;
   font-size: 22px;
-  padding: 10px 12px 6px;
   width: auto;
   overflow: auto;
   scrollbar-width: none;
-  z-index: 1;
-}
-
-.categoria,
-.avaliacao {
-  z-index: 1;
-  margin: 0 12px;
 }
 
 .categoria {
@@ -225,20 +217,19 @@ button:active {
   align-items: center;
   justify-content: center;
   color: black;
-  width: fit-content;
   padding: 4px 10px;
   border-radius: 5px;
   font-weight: 600;
   font-size: 12px;
   border: none;
   margin-bottom: 8px;
+  width: 40px;
 }
 
 .avaliacao {
   color: black;
   border-radius: 5px;
-  max-width: 45px;
-  padding: 4px 8px;
+  max-width: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
