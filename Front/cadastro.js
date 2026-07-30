@@ -36,16 +36,19 @@ const campoTitulo = document.querySelector("#titulo");
 const campoData = document.querySelector("#data");
 const campoTipo = document.querySelector("#tipo");
 const campoGenero = document.querySelector("#genero");
-const campoSinopse = document.querySelector("#Sinopse");
+const campoSinopse = document.querySelector("#sinopse");
+const campoTrailer = document.querySelector("#trailer");
+
 
 
 
 
 const formCadastrar= document.querySelector("#cadastro");
 formCadastrar.addEventListener("submit", (event) =>{
-    if(campoAvaliacao.value === "" || campoAvaliacao.value < 0 || campoAvaliacao > 10){
+    if(campoAvaliacao.value === "" || campoAvaliacao.value < 0 || campoAvaliacao.value > 10){
       event.preventDefault();
       campoAvaliacao.style.border = "3px solid red";
+      campoAvaliacao.value = "";
         campoAvaliacao.setAttribute("Placeholder", "AVALIAÇÃO INCORRETA!");
     }
     if(campoCapa.value === "" ){
@@ -62,6 +65,11 @@ formCadastrar.addEventListener("submit", (event) =>{
        event.preventDefault();
           campoSinopse.style.border = "3px solid red";
                campoSinopse.setAttribute("Placeholder", "CAMPO OBRIGATORIO!");
+    }
+     if( campoTrailer.value === ""){
+       event.preventDefault();
+          campoTrailer.style.border = "3px solid red";
+               campoTrailer.setAttribute("Placeholder", "CAMPO OBRIGATORIO!");
     }
     if(!campoData.checkValidity()){
        event.preventDefault();

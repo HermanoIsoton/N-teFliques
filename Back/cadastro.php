@@ -14,11 +14,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $titulo = $_POST["titulo"];
     $genero = $_POST["genero"];
     $avaliacao = $_POST["avaliacao"];
+    $trailer = $_POST["trailer"];
     $sinopse = $_POST["sinopse"];
     
-    $sql = "INSERT INTO catalogo (capa, tipo, data_de_lançamento, titulo, genero, avaliacao, sinopse) VALUES (?, ?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO catalogo (capa, tipo, data_de_lançamento, titulo, genero, avaliacao, trailer, sinopse) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sssssis", $capa, $tipo, $dataLancamento, $titulo, $genero, $avaliacao, $sinopse);
+    $stmt->bind_param("sssssdss", $capa, $tipo, $dataLancamento, $titulo, $genero, $avaliacao, $trailer, $sinopse);
       
 
     if( $stmt->execute()){
