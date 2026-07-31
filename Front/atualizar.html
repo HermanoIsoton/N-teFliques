@@ -3,10 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="atualizar.css">
     <title>Atualização</title>
   </head>
   <body>
-    <h2>Editar Informaçoes</h2>
+    <div class="card-trailer">
+      <h2>Assista ao trailer</h2>
+      <iframe id="trailer" src="" frameborder="0"></iframe>
+    </div>
+    <div class="card-edição">
+      <div class="titulos">
+    <h2 id="tituloh2">Editar Informaçoes</h2>
+    <img src="../Imagens/logo-header.png" alt="">
+    </div>
     <form action="../Back/atualizar.php" method="post" id="formAtualizar">
       <input type="hidden" name="id" id="idAtualizar" />
 
@@ -72,7 +81,7 @@
       <div class="campoEdicao">
         <label>Link do trailer</label>
         <input
-          id="trailer"
+          id="trailerc"
           type="text"
           name="trailer"
           placeholder="Link do trailer do filme/serie"
@@ -88,13 +97,14 @@
         />
       </div>
       <div class="Editar">
-        <button id="editar" type="submit">editar registro</button>
+        <button id="editar" type="submit">EDITAR INFORMAÇOES</button>
       </div>
     </form>
     <form id="form-delete" method="POST" action="../Back/deletar.php">
       <input type="hidden" name="id" id="campo-id" />
       <button id="deletar" type="submit">excluir registro</button>
     </form>
+    </div>
     <script src="atualizar.js"></script>
   </body>
 </html>

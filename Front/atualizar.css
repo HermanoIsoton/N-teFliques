@@ -1,0 +1,168 @@
+
+* {
+   margin: 0;
+   border: 0;
+   padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: rgb(6, 4, 17);
+  color: #eae6da;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 32px;
+  align-items: start;
+  padding-left: 30px ;
+  padding-right: 30px ;
+}
+
+.card-edição {
+  align-self: stretch;
+  grid-column: 1;
+  background-color: #15171d;
+  border: 1px solid #2a2c34;
+  border-radius: 6px;
+  padding: 40px 44px 36px;
+  box-shadow: 0 18px 40px -18px rgba(0, 0, 0, 0.65);
+
+}
+
+.card-edição img {
+
+  width: 300px;
+  height: 90px;
+  border: 1px solid #2a2c34;
+  border-radius: 6px;
+}
+
+#tituloh2 {
+  font-size: 40px;
+  color: #eae6da;
+}
+
+.card-edição form#formAtualizar {
+  margin-top: 28px;
+  display: grid;
+  gap: 20px;
+}
+
+.campoEdicao {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.campoEdicao label {
+  font-size: 15px;
+  color: #96938a;
+}
+
+.campoEdicao input,
+.campoEdicao select {
+  background: #1c1f27;
+  border: 1px solid #2a2c34;
+  border-bottom: 2px solid #2a2c34;
+  border-radius: 4px;
+  padding: 12px;
+  font-size: 14.5px;
+  color: #eae6da;
+
+}
+
+.campoEdicao input:hover,
+.campoEdicao select:hover {
+  border-color: #3a3d48;
+}
+
+.titulos{
+  width: 100%;
+  display: flex;
+}
+
+.campoEdicao.selects {
+  flex-direction: row;
+  gap: 20px;
+}
+
+.campoEdicao.selects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+   row-gap: 8px;
+
+}
+
+
+#editar {
+  width: 100%;
+  background-color: #d4a24e;
+  color: #211405;
+  border-radius: 4px;
+  padding: 15px;
+  font-weight: bolder;
+  font-size: 12.5px;
+}
+
+#editar:hover {
+  background: #e8c07f;
+}
+
+#form-delete {
+  margin-top: 8px;
+  padding-top: 24px;
+  border-top: 1px solid #2a2c34;
+  display: flex;
+  justify-content:end;
+}
+
+#deletar {
+  background: transparent;
+  color: #c85d73;
+  border: 1px solid #a3324a;
+  border-radius: 4px;
+  padding: 13px;
+  font-size: 11.5px;
+  width: 160px;
+  font-weight: bolder;
+}
+
+#deletar:hover {
+  background-color: #a3324a;
+  color: #eae6da;
+}
+
+
+
+
+.card-trailer {
+  grid-column: 2;
+  position: sticky;
+  top: 48px;
+  background: #05060a;
+  border-radius: 6px;
+  padding: 22px 0;
+  box-shadow: 0 18px 40px -18px rgba(0, 0, 0, 0.65), 0 0 0 1px #2a2c34;
+}
+
+#trailer {
+  width: 90%;
+  margin:24px;
+  height: 350px;
+  border-radius: 3px;
+  box-shadow: 0 0 0 10px #0f1015;
+}
+
+.card-trailer {
+  border-top: 14px solid #d4a24e;
+  border-bottom: 14px solid #d4a24e;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

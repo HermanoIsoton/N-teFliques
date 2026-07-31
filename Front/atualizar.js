@@ -8,7 +8,7 @@ const campodata = document.getElementById("dataLancamento");
 const campotipo = document.getElementById("tipo");
 const campogenero = document.getElementById("genero");
 const campoavaliacao = document.getElementById("avaliacao");
-const campotrailer = document.getElementById("trailer");
+const campotrailer = document.getElementById("trailerc");
 const camposinopse = document.getElementById("sinopse");
 
 campoID.value = parametrosDaUrl.get("id");
@@ -21,5 +21,16 @@ campoavaliacao.value = parametrosDaUrl.get("avaliacao");
 campotrailer.value = parametrosDaUrl.get("trailer");
 camposinopse.value = parametrosDaUrl.get("sinopse");
 
-const campoIdDeletar = document.getElementById("campo-id");
-campoIdDeletar.value = parametrosDaUrl.get("id");
+const btndeletar = document.getElementById("deletar");
+
+btndeletar.addEventListener("click", () => {
+    const usuarioConfirmou = confirm(`Tem certeza que deseja excluir o registro deste filme?`);
+    if (usuarioConfirmou) {
+        const campoIdDeletar = document.getElementById("campo-id");
+        campoIdDeletar.value = parametrosDaUrl.get("id");  
+    }
+});
+
+// trailer
+const trailer = document.getElementById("trailer");
+trailer.src = campotrailer.value;

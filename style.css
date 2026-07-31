@@ -269,6 +269,7 @@ article{
     padding-right: 14px;
     background-position: center;
     background-size: cover;
+    transition: all 0.5s linear;
 }
 .ano p{
     background-color: rgba(255,255,255,0.06);
@@ -412,4 +413,79 @@ form:hover{
     background-color: #ffd84d;
     gap: 3px;
     
+}
+#tema{
+    background-color:transparent;
+    color: rgb(146, 141, 141);
+    border-radius: 10px;
+    border: 2px solid gray;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+/* coisas do tema claro */
+body.tema-claro{
+    background-color: #f2f0ea;
+}
+body.tema-claro #tema{
+    border: 2px solid rgb(59, 59, 59);
+    color: rgb(56, 55, 55);
+}
+body.tema-claro .menu{
+    background:  #ffffff ;
+   
+}
+
+body.tema-claro .main{
+    background: linear-gradient(90deg, rgba(255,178,56,0.08) 0%, #f2f0ea 100%);
+}
+
+body.tema-claro header{
+    color: #a3271f;
+}
+body.tema-claro header input{
+    color: #1a1204;
+
+}
+
+body.tema-claro .barraPesquisa{
+    background-color: #ffffff;
+
+}
+
+body.tema-claro article{
+    background-color: #ffffff;
+
+
+
+}
+body.tema-claro .informacoes{
+    color: #1a1204;
+    
+}
+body.tema-claro .ano{
+    color: #6b6b6b;
+}
+body.tema-claro .ano p{
+    background-color: rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.08);
+}
+body.tema-claro .descricao{
+    color: #4a4a52;
+}
+
+body.tema-claro .btn-left,
+body.tema-claro .carrosel i{
+    background-color: rgba(255,255,255,0.7);
+    color: #1a1204;
+}
+
+body.tema-claro .inicio{
+    color: #1a1204;
+}
+body.tema-claro .inicio select{
+    background-color: #ffffff;
+    color: #1a1204;
+
 }

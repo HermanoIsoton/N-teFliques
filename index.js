@@ -155,7 +155,12 @@ divano.appendChild(tipo);
 
 const avalia = document.createElement("p");
 avalia.id = "avalia";
+ const estrela = document.createElement("i");
+  estrela.className = "bi bi-star";
+  divano.appendChild(estrela);
 divano.appendChild(avalia);
+
+
 
 const sinopse = document.createElement("p");
 sinopse.id = "sinopse";
@@ -191,7 +196,7 @@ function baner(listaDeDados) {
     categoriaCarrosel.push(item.genero);
     tipoCarrosel.push(item.tipo);
     trailerCarrosel.push(item.trailer);
-    avaliaCarrosel.push(item.avaliacao).toFixed(1);
+    avaliaCarrosel.push(Number(item.avaliacao).toFixed(1));
     sinopseCarrosel.push(item.sinopse);
   });
 }
@@ -304,4 +309,10 @@ campoFiltrotitulo.addEventListener("input", (event) => {
   containerCardsTitulo.parentElement.style.display = "block";
   mostrarCardstitulo(dadosFiltrados);
 });
-//   editar, deletar, arrumar o avalicao, visualisar informacoes de registro
+
+// reponsividade
+
+const botaoTema = document.getElementById('tema');
+botaoTema.addEventListener('click', () => {
+    document.body.classList.toggle('tema-claro');
+});
