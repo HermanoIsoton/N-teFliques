@@ -489,3 +489,140 @@ body.tema-claro .inicio select{
     color: #1a1204;
 
 }
+
+/*resposividade*/
+
+@media (max-width: 1000px) {
+  
+   body{
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: 1fr;
+}
+
+/*aside*/
+.menu{
+    padding: 5px;
+}
+
+.menu div{
+    width: 70px;
+    gap: 3px;
+     padding-left: 2px;
+}
+.menu div i{
+    font-size: 14px;
+    width: 20px;
+}
+.menu button{
+    font-size: 13px;
+}
+
+
+
+
+
+
+
+article{
+    height: 200px;
+   margin-left: 5px;
+   margin-right: 5px;
+   width: 100%;
+}
+.informacoes{
+    width: 50%;
+    height: 100%;
+}
+.titulo{
+    font-size: 20px;
+    height: 60px;
+    min-height: 60px;
+}
+.ano{
+    height: 30px;
+    gap: 5px;
+    font-size: 10px;
+
+
+}
+.descricao{
+    height: 180px;
+    font-size: 13px;
+    color:  #9a9aa2;
+   padding-top: 5px;
+  
+}
+.btns{
+    height: 70px;
+}
+.btns button{
+    font-size: 10px;
+    border-radius: 4px;
+    height: 25px;
+    width: 70px;
+}
+
+.btn-left, .carrosel i{
+  display: none;
+}
+
+.ano p{
+    border-radius: 4px;
+    height: 20px;
+}
+
+
+
+
+section{
+    height: 200px;
+    padding-top: 6px;
+}
+.inicio{
+    height: 20px;
+    margin-left: 20px;
+    font-size: 13px;
+}
+
+.inicio select{
+    height: 20px;
+}
+
+
+.container-cards,.container-cards-filmes, .container-cards-series, .container-cards-genero,.container-cards-titulo{
+    height: 180px;
+}
+
+.card{
+    height: 100%;
+    width: 150px;
+}
+form{
+     height: 100%;
+    width: 100%;  
+}
+form:hover{
+      width: 150px;
+    height: 180px;
+}
+.card:hover{
+    width:150px;
+    height: 180px;
+}
+.nome{
+    font-size: 15px;
+
+
+}
+
+.categoria{
+    font-size: 12px;
+    height: 17px; 
+    width: 30px;
+}
+.avaliacao{
+    font-size: 11px;
+    border-radius: 3px;
+    
+}
+}

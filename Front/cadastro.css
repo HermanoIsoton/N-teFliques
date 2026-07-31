@@ -45,7 +45,6 @@ img {
 
 label {
   width: 130px;
-  font-weight: 600;
   color: rgb(223, 190, 140);
 }
 
@@ -196,4 +195,66 @@ button:hover {
   font-size: 13px;
   border: none;
   margin-bottom: 14px;
+}
+
+
+
+
+
+
+@media (max-width: 1000px) {
+  body {
+    flex-direction: column;
+    height: 1500px;
+    min-height: 100vh;
+    padding:0px;
+    gap: 10px;
+    width:100vw;
+  }
+
+  .formulario {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    padding: 20px;
+  }
+
+  .visualizacao {
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    padding: 10px;
+  }
+
+  .campo {
+    flex-wrap: wrap;
+  }
+
+  label {
+    width: 100%;
+  }
+
+  .selects label {
+    width: 100%;
+  }
+
+  input,
+  select {
+    width: 100%;
+  }
+
+  select {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .card {
+    width: 200px;
+    height: 250px;
+  }
+
+  .card:hover {
+    width: 220px;
+    height: 260px;
+  }
 }

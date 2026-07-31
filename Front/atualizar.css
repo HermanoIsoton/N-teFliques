@@ -166,3 +166,48 @@ body {
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 1000px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 24px;
+    height: 1500px;
+  }
+
+  .card-edição {
+    grid-column: 1;
+  
+  }
+
+  .card-edição img {
+    width: 160px;
+    max-width: 300px;
+    height: auto;
+  }
+
+  #tituloh2 {
+    font-size: 30px;
+  }
+
+  .campoEdicao.selects {
+    grid-template-columns: 1fr;
+  }
+
+  .card-trailer {
+    grid-column: 1;
+  }
+
+  #trailer {
+    width: 100%;
+    margin: 16px 0;
+    height: 220px;
+  }
+
+ 
+
+  #deletar {
+    width: 100%;
+  }
+}

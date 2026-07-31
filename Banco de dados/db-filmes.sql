@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 30/07/2026 às 08:56
+-- Tempo de geração: 31/07/2026 às 22:49
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.0.30
 
@@ -36,7 +36,7 @@ CREATE TABLE `catalogo` (
   `capa` varchar(255) DEFAULT NULL,
   `trailer` varchar(400) NOT NULL,
   `avaliacao` float DEFAULT NULL,
-  `sinopse` varchar(100) DEFAULT NULL
+  `sinopse` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
@@ -70,7 +70,7 @@ ALTER TABLE `catalogo`
 -- AUTO_INCREMENT de tabela `catalogo`
 --
 ALTER TABLE `catalogo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
